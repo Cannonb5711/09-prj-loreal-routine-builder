@@ -25,6 +25,19 @@
 
       <!-- Category Filter -->
       <div class="search-section">
+        <input
+          id="productSearch"
+          type="text"
+          placeholder="Search products by name or brand…"
+          style="
+            flex: 2;
+            margin-right: 12px;
+            padding: 16px;
+            font-size: 18px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+          "
+        />
         <select id="categoryFilter">
           <option value="" disabled selected>Choose a Category</option>
           <option value="cleanser">Cleansers</option>
@@ -45,6 +58,21 @@
       <!-- Selected Products -->
       <div class="selected-products">
         <h2>Selected Products</h2>
+        <button
+          id="clearSelectionsBtn"
+          style="
+            margin-bottom: 16px;
+            padding: 10px 18px;
+            font-size: 16px;
+            border-radius: 8px;
+            background: #eaf6ff;
+            color: #222;
+            border: 1px solid #0078d7;
+            cursor: pointer;
+          "
+        >
+          Clear Selections
+        </button>
         <div id="selectedProductsList"></div>
         <button id="generateRoutine" class="generate-btn">
           <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
@@ -85,6 +113,7 @@
       </footer>
     </div>
 
+    <!-- JavaScript files for secrets (API keys) and main logic -->
     <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
     <script src="secrets.js"></script>
     <script src="script.js"></script>
